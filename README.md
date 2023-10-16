@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+### Review App (Netlify)
+https://delicate-kataifi-5ce939.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Summary
 
-## Available Scripts
+**Hi, Smarkets team!**
 
-In the project directory, you can run:
+I decided to build a sports match app that displays upcoming matches for different sports, including "CS GO," "Cricket," "Baseball," and "Boxing." I made several choices and faced some challenges throughout the project
 
-### `npm start`
+### Challenges & technical decisions
+1. **Sport Selection Tabs**: I chose to use sport selection tabs to provide a clear and organized way for users to choose their preferred sport
+2. **API Endpoints**: I used four API endpoints - "GET events," "GET markets," "GET contracts," and "GET last_executed_price" - to fetch data about the matches. I encountered a challenge where the "last_executed_price" often returned as 0. This may be due to test data, and I assumed it was a temporary issue.
+3. **CSS Styling**: I opted not to use a CSS component library for this small React app. Instead, I used StyledComponents to style React components. This choice allows for easy customization and maintains a lightweight codebase, which is suitable for a small project like this.
+4. **CORS Proxy Service**: I noticed that the CORS proxy service, https://cors-anywhere.herokuapp.com, had some limitations. To overcome this challenge, I switched to https://corsproxy.io/, a different free service to handle cross-origin requests. This decision ensured seamless data fetching from external APIs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Improvements
+If I had additional time on the frontend task, I would consider the following improvements:
+1. **Dynamic Match Volumes**: Instead of hardcoding match volumes, I would add another backend call to fetch the real-time match volumes. This would provide users with up-to-date information.
+2. **Loading State Indicator**: I would implement a loading state indicator, such as a spinner, to give users feedback when waiting for backend data to load. This improves user experience by preventing confusion during data retrieval.
+3. **Date Formatting Library**: To make the app more user-friendly, I would use a date formatting library to display match dates in a more human-readable format. This ensures that users can quickly and easily understand when the matches are scheduled without having to interpret raw date data from the backend.
